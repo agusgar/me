@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
-import Home from './pages/home';
-import Eprofe from './pages/eprofe';
+import Home from './pages/Home';
+import Eprofe from './pages/Eprofe';
 
 function App() {
   return (
