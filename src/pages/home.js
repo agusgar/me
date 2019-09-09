@@ -4,9 +4,6 @@ import { Typography } from '@material-ui/core';
 import Projects from '../components/Home/Projects';
 
 const useStyles = makeStyles({
-  root: {
-
-  },
   image: {
      backgroundImage: `url(home-image.jpg)`,
      backgroundRepeat: 'none',
@@ -35,11 +32,12 @@ const useStyles = makeStyles({
     border: '4px solid #fff',
   },
 });
+
 function Home () {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div>
       <div className={classes.image}>
         <div className={classes.imageText}>
           <div className={classes.picture} />
