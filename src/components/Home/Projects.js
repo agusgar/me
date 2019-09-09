@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
-import { SvgIcon } from '@material-ui/core';
 
 const useStyles = makeStyles({
   projectSections: {
