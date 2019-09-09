@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import { Typography } from '@material-ui/core';
 import Projects from '../components/Home/Projects';
+import Skills from '../components/Home/Skills';
 
 const useStyles = makeStyles({
   image: {
@@ -46,7 +47,7 @@ function Home () {
         </div>
       </div>
       <section>
-        <Projects />
+        <Skills />
       </section>
     </div>
   );
