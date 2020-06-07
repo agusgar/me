@@ -4,7 +4,7 @@ import { Typography, Box } from '@material-ui/core';
 import Rating from '@material-ui/lab/Rating';
 import clsx from 'clsx'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
@@ -14,12 +14,19 @@ const useStyles = makeStyles({
     height: 380,
     alignItems: 'center',
     justifyContent: 'center',
+    [theme.breakpoints.down('md')]: {
+      height: 'auto',
+      flexDirection: 'column',
+    },
   },
   landingRowImageContainer: {
     flexGrow: 1,
     padding: 20,
     width: '100%',
     height: '100%',
+    [theme.breakpoints.down('md')]: {
+      order: 1,
+    }
   },
   landingRowImage: {
     backgroundRepeat: 'no-repeat',
@@ -27,6 +34,10 @@ const useStyles = makeStyles({
     backgroundPosition: 'center',
     height: '100%',
     width: '100%',
+    [theme.breakpoints.down('md')]: {
+      height: 280,
+      backgroundSize: 'cover',
+    },
   },
   landingRowDescription: {
     flexGrow: 1,
@@ -35,6 +46,9 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
+    [theme.breakpoints.down('md')]: {
+      order: 2,
+    }
   },
   skillsImage: {
     backgroundImage: 'url(skills-illustration-amber.png)',
@@ -46,11 +60,10 @@ const useStyles = makeStyles({
     marginRight: 10,
     marginLeft: 20,
   }
-});
+}));
 
 function Skills() {
   const classes = useStyles();
-
   const skills = [
     { label: 'ES5/ES6/ES7+', value: 5 },
     { label: 'HTML/CSS/SASS', value: 5 },
@@ -84,7 +97,8 @@ function Skills() {
             </Box>
           ))}
         </div>
-        <div className={clsx(classes.landingRowImage, { [classes.skillsImage]: true })}>
+        <div className={classes.landingRowImageContainer}>
+          <div className={clsx(classes.landingRowImage, { [classes.skillsImage]: true })}></div>
         </div>
       </div>
     </div>
