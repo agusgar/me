@@ -81,7 +81,7 @@ function Home () {
         <div className={classes.imageMobile}></div>
         <div className={classes.imageTextMobile}>
           <div className={classes.pictureMobile} />
-          <Typography variant="h3" gutterBottom>Agustin Garbarino</Typography>
+          <Typography variant="h4" gutterBottom>Agustin Garbarino</Typography>
           <Typography variant="subtitle" className={classes.imageSubtitle}>SOFTWARE DEVELOPER</Typography>
         </div>
       </Hidden>
