@@ -26,6 +26,7 @@ const useStyles = makeStyles(theme => ({
     height: '100%',
     [theme.breakpoints.down('md')]: {
       order: 1,
+      padding: 0,
     }
   },
   landingRowImage: {
@@ -48,6 +49,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     [theme.breakpoints.down('md')]: {
       order: 2,
+      padding: 0,
     }
   },
   skillsImage: {
@@ -83,8 +85,10 @@ function Skills() {
           <div className={clsx(classes.landingRowImage, { [classes.aboutmeImage]: true })}></div>
         </div>
         <div className={classes.landingRowDescription}>
-          <Typography variant="h2">About me</Typography>
-          <Typography>8+ years of Javascript development experience. Really motivated to continuously gain knowledge regarding JS ecosystem. Big fan of clean code and functional programming principles.</Typography>
+          <Box padding={2}>
+            <Typography variant="h2">About me</Typography>
+            <Typography>8+ years of Javascript development experience. Really motivated to continuously gain knowledge regarding JS ecosystem. Big fan of clean code and functional programming principles.</Typography>
+          </Box>
         </div>
       </div>
       <div className={classes.landingRow}>
