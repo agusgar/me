@@ -82,7 +82,7 @@ function Skills() {
     { label: "ExpressJS", imgs: ["skill-express.png"] },
     { label: "MongoDB", imgs: ["skill-mongodb.jpg"] },
     {
-      label: "Google Cloud/Firebase/Big Query",
+      label: "Google Cloud Platform/Firebase/Big Query",
       imgs: [
         "skill-googlecloud.jpg",
         "skill-firebase.png",
