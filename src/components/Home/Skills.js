@@ -81,7 +81,14 @@ function Skills() {
     { label: "NodeJS", imgs: ["skill-nodejs.png"] },
     { label: "ExpressJS", imgs: ["skill-express.png"] },
     { label: "MongoDB", imgs: ["skill-mongodb.jpg"] },
-    { label: "Firebase", imgs: ["skill-firebase.png"] },
+    {
+      label: "Google Cloud/Firebase/Big Query",
+      imgs: [
+        "skill-googlecloud.jpg",
+        "skill-firebase.png",
+        "skill-bigquery.jpg",
+      ],
+    },
   ];
   return (
     <div className={classes.root}>
