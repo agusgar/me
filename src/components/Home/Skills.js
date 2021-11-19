@@ -1,19 +1,22 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
-import { Typography, Box } from "@material-ui/core";
-import Rating from "@material-ui/lab/Rating";
+import { Typography, Box, Avatar } from "@material-ui/core";
 import clsx from "clsx";
+import { AvatarGroup } from "@material-ui/lab";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
+    marginTop: theme.spacing(1),
   },
   landingRow: {
     display: "flex",
     height: 380,
     alignItems: "center",
     justifyContent: "center",
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
     [theme.breakpoints.down("md")]: {
       height: "auto",
       flexDirection: "column",
@@ -67,16 +70,18 @@ const useStyles = makeStyles((theme) => ({
 function Skills() {
   const classes = useStyles();
   const skills = [
-    { label: "ES5/ES6/ES7+", value: 5 },
-    { label: "HTML/CSS/SASS", value: 5 },
-    { label: "React/Redux", value: 5 },
-    { label: "Angular", value: 4 },
-    { label: "Typescript", value: 4 },
-    { label: "Webpack", value: 5 },
-    { label: "NodeJS", value: 4 },
-    { label: "ExpressJS", value: 4 },
-    { label: "MongoDB", value: 4 },
-    { label: "Firebase", value: 4 },
+    { label: "Javascript", imgs: ["skill-js.png"] },
+    { label: "Typescript", imgs: ["skill-typescript.jpg"] },
+    {
+      label: "HTML/CSS/SASS",
+      imgs: ["skill-html.jpg", "skill-css.jpg", "skill-sass.jpg"],
+    },
+    { label: "React/Redux", imgs: ["skill-react.png", "skill-redux.png"] },
+    { label: "Webpack", imgs: ["skill-webpack.jpg"] },
+    { label: "NodeJS", imgs: ["skill-nodejs.png"] },
+    { label: "ExpressJS", imgs: ["skill-express.png"] },
+    { label: "MongoDB", imgs: ["skill-mongodb.jpg"] },
+    { label: "Firebase", imgs: ["skill-firebase.png"] },
   ];
   return (
     <div className={classes.root}>
@@ -104,11 +109,35 @@ function Skills() {
         <div className={classes.landingRowDescription}>
           <Typography variant="h2">Skills</Typography>
           {skills.map((skill) => (
-            <Box component="div" display="flex" justifyContent="center">
+            <Box
+              component="div"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              marginBottom={1}
+            >
               <Typography className={classes.skillLabel}>
                 {skill.label}
               </Typography>
-              <Rating value={skill.value} readOnly />
+              {skill.imgs.length === 1 && (
+                <Avatar
+                  alt={skill.label}
+                  src={skill.imgs[0]}
+                  sx={{ width: 24, height: 24 }}
+                />
+              )}
+              {skill.imgs.length > 1 && (
+                <AvatarGroup>
+                  {skill.imgs.map((img, index) => (
+                    <Avatar
+                      key={index}
+                      alt={`${skill.label}-${index}`}
+                      src={img}
+                      sx={{ width: 24, height: 24 }}
+                    />
+                  ))}
+                </AvatarGroup>
+              )}
             </Box>
           ))}
         </div>
