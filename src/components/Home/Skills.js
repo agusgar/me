@@ -104,7 +104,7 @@ function Skills() {
           <Box padding={2}>
             <Typography variant="h2">About me</Typography>
             <Typography>
-              I have 9+ years of Javascript development experience. I am
+              I have 10+ years of Javascript development experience. I am
               motivated to gain knowledge regarding the JS ecosystem
               continuously. Big fan of clean code and functional programming
               principles.
