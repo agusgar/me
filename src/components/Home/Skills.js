@@ -130,7 +130,7 @@ function Skills() {
                 <Avatar
                   alt={skill.label}
                   src={skill.imgs[0]}
-                  sx={{ width: 24, height: 24 }}
+                  style={{ width: 24, height: 24 }}
                 />
               )}
               {skill.imgs.length > 1 && (
@@ -140,7 +140,7 @@ function Skills() {
                       key={index}
                       alt={`${skill.label}-${index}`}
                       src={img}
-                      sx={{ width: 24, height: 24 }}
+                      style={{ width: 24, height: 24 }}
                     />
                   ))}
                 </AvatarGroup>

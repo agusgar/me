@@ -62,6 +62,9 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
     padding: "40px 0",
   },
+  imageSubtitle: {
+    letterSpacing: 2,
+  },
 }));
 
 function Home() {
@@ -75,7 +78,7 @@ function Home() {
             <Typography variant="h3" gutterBottom>
               Agustin Garbarino
             </Typography>
-            <Typography variant="subtitle" className={classes.imageSubtitle}>
+            <Typography variant="subtitle1" className={classes.imageSubtitle}>
               SOFTWARE DEVELOPER
             </Typography>
           </div>
@@ -88,7 +91,7 @@ function Home() {
           <Typography variant="h4" gutterBottom>
             Agustin Garbarino
           </Typography>
-          <Typography variant="subtitle" className={classes.imageSubtitle}>
+          <Typography variant="subtitle1" className={classes.imageSubtitle}>
             SOFTWARE DEVELOPER
           </Typography>
         </div>
